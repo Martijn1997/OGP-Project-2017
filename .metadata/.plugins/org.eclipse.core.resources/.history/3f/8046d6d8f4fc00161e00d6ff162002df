@@ -1,0 +1,44 @@
+package asteroids.model;
+
+
+public class Ship {
+	
+	
+	public double getXPosition(){
+		
+		return this.xPosition;
+	}
+	
+	/**
+	 * Sets the x position of the ship
+	 * 
+	 * @post	...
+	 * 			|new.getXPosition() = xPos
+	 */
+	public void setXPosition(double xPos){
+		this.xPosition = xPos;
+	}
+	
+	public double xPosition;
+	
+	
+	public double getYPosition(){
+		
+		return this.yPosition;
+	}
+	
+	
+	/**
+	 * Sets the y position of the ship
+	 * 
+	 * @post	...
+	 * 			|new.getYPosition() = yPos
+	 */
+	public void setYposition(double yPos){
+		this.yPosition = yPos;
+	}
+	
+	public double yPosition;
+	
+
+}
