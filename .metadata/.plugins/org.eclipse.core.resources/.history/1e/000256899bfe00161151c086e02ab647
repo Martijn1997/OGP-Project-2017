@@ -62,23 +62,10 @@ public class Ship {
 	 * 
 	 * @post	...
 	 * 			|new.getXPosition() = xPos
-	 * 
-	 * @throws 	IllegalArgumentexception
-	 * 			| !isValidposition
 	 */
 	@Basic @Raw
-	public void setXPosition(double xPos) throws IllegalArgumentException{
-		if(!isValidPosition(xPos))
-			throw new IllegalArgumentException();
+	public void setXPosition(double xPos){
 		this.xPosition = xPos;
-	}
-	
-	/**
-	 * Checks if the Position is a Valid position
-	 */
-	public boolean isValidPosition(double Pos){
-		return !((Pos == Double.NaN)||(Pos == Double.POSITIVE_INFINITY)
-				||(Pos == Double.NEGATIVE_INFINITY));
 	}
 	
 	private double xPosition;
@@ -87,7 +74,8 @@ public class Ship {
 	 * returns the y position of the ship
 	 */
 	@Basic @Raw
-	public double getYPosition(){	
+	public double getYPosition(){
+		
 		return this.yPosition;
 	}
 	
@@ -97,13 +85,9 @@ public class Ship {
 	 * 
 	 * @post	...
 	 * 			|new.getYPosition() = yPos
-	 * @throws 	IllegalArgumentException
-	 * 			| !isValidPosition
 	 */
 	@Basic @Raw
-	public void setYposition(double yPos) throws IllegalArgumentException{
-		if(!isValidPosition(yPos))
-			throw new IllegalArgumentException();
+	public void setYposition(double yPos){
 		this.yPosition = yPos;
 	}
 	
